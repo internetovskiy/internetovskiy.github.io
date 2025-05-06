@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Папуля</title>
+    <link rel="icon" type="image/png" href="icon.png">
+    <link rel="stylesheet" href="css/stryle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <button class="cart-button" id="cartButton">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count" id="cartCount">0</span>
+    </button>
+
+    <div class="cart" id="cart">
+        <h2><i class="fas fa-shopping-cart"></i> Корзина</h2>
+        <div id="cartItems" class="cart-items"></div>
+        <div id="cartEmpty" class="cart-empty">Корзина пуста</div>
+        <div id="cartTotal" class="cart-total">Итого: 0 ₽</div>
+        <button id="cartCheckout" class="cart-checkout">Оформить заказ</button>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <div class="profile">
+                <div class="profile-image">
+                    <img src="avatar.jpg" alt="Аватар" />
+                </div>
+                <div class="profile-info">
+                    <h1>Папуля</h1>
+                    <p>Разработчик Discord ботов, сайтов</p>
+                    <div class="social-links">
+                        <a href="https://discord.com/users/internetovskiy" target="_blank" rel="noopener noreferrer" class="social-button">
+                            <i class="fab fa-discord"></i>
+                        </a>
+                        <a href="https://t.me/infernalabuse" target="_blank" rel="noopener noreferrer" class="social-button">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="about">
+            <h2>О моих услугах</h2>
+            <p>Я предлагаю широкий спектр услуг по разработке и настройке ботов для Discord. Мои решения помогут автоматизировать процессы на вашем сервере, обеспечить безопасность и разнообразить взаимодействие с пользователями. Все боты разрабатываются индивидуально под ваши потребности.</p>
+        </section>
+
+        <div class="music-player">
+            <div class="player-header">
+                <div class="now-playing">
+                    <div class="track-title">--</div>
+                    <div class="track-artist">--</div>
+                </div>
+                <div class="volume-control">
+                    <button class="volume-button" id="volumeButton">
+                        <i class="fas fa-volume-up"></i>
+                    </button>
+                    <input type="range" class="volume-slider" id="volumeSlider" min="0" max="100" value="100">
+                </div>
+            </div>
+            <div class="player-controls">
+                <button class="control-button" id="prevButton">
+                    <i class="fas fa-backward"></i>
+                </button>
+                <button class="control-button play-button" id="playButton">
+                    <i class="fas fa-play"></i>
+                </button>
+                <button class="control-button" id="nextButton">
+                    <i class="fas fa-forward"></i>
+                </button>
+            </div>
+            <div class="progress-container" id="progressContainer">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <div class="time-info">
+                <span id="currentTime">0:00</span>
+                <span id="duration">0:00</span>
+            </div>
+        </div>
+
+        <section class="services">
+            <h2>Мои услуги</h2>
+            <div class="tabs">
+                <div class="tab-buttons">
+                    <button class="tab-button active" data-tab="main">Основное</button>
+                    <button class="tab-button" data-tab="protection">Защита</button>
+                    <button class="tab-button" data-tab="events">Мероприятия</button>
+                    <button class="tab-button" data-tab="tools">Инструменты</button>
+                    <button class="tab-button" data-tab="hosting">Хостинг</button>
+                </div>
+
+                <div id="tabContent"></div>
+            </div>
+        </section>
+
+        <section class="contact">
+            <h2>Связаться со мной</h2>
+            <p class="mb-4 text-gray-300">Если вы заинтересованы в моих услугах или у вас есть вопросы, свяжитесь со мной через:</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fab fa-discord"></i>
+                    <span>Discord: <strong>internetovskiy</strong></span>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-telegram"></i>
+                    <span>Telegram: <strong>@infernalabuse</strong></span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© <span id="year"></span> Все права защищены</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -30,7 +30,7 @@ const tabData = {
 };
 
 const packagePrices = {
-    main: '1,500 ₽',
+    main: '2,300 ₽',
     protection: '3,300 ₽',
     events: '3,150 ₽',
     tools: '900 ₽'
